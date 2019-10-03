@@ -1,4 +1,21 @@
+solution
 
+function strToLower(string) {
+  const arrayOfASCIICodes = string.split("").map(char => char.charCodeAt());
+  const lowerCasesASCIICodes = arrayOfASCIICodes.map(code => {
+    if (code >= 65 && code <= 90) {
+      return code + 32;
+    }
+
+    return code;
+  });
+
+  return String.fromCharCode(...lowerCasesASCIICodes);
+}
+
+module.exports = strToLower;
+
+Another solution
 
 const toLower = (str) => { 
 let word = str.split(""); // on sépare chaque mot de la phrase dans un array
